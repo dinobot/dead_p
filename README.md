@@ -4,7 +4,7 @@
 
 # brew db from json dump:
 
-curl "http://127.0.0.1:80/api/snapshots?timestamp=<unixtime>" > file <br />
+curl 'http://127.0.0.1:80/api/snapshots?timestamp=<unixtime>' > file <br />
 mkdir slices; python slicer.py < file <br />
 for s in `ls slices/`; do ./deadprewery $s slices/$s m30.db; done <br />
 
